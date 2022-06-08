@@ -1,13 +1,29 @@
 package it.prova.catenadimontaggio;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class CatenadimontaggioApplication {
+import it.prova.catenadimontaggio.service.CatenaDiMontaggioService;
 
+@SpringBootApplication
+public class CatenadimontaggioApplication implements CommandLineRunner {
+
+	@Autowired
+	private CatenaDiMontaggioService catenaDiMontaggioService;
+
+	
 	public static void main(String[] args) {
 		SpringApplication.run(CatenadimontaggioApplication.class, args);
 	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		catenaDiMontaggioService.avviaMontaggio();
+	}
+	
+	
 
 }

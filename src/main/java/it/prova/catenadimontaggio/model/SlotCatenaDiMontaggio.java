@@ -6,16 +6,18 @@ public class SlotCatenaDiMontaggio {
 	private String brand;
 	private String country;
 	private List<Automobile> automobili;
+	private int id;
 	
 	public SlotCatenaDiMontaggio() {
 		
 	}
 	
-	public SlotCatenaDiMontaggio(String brand, String country, List<Automobile> automobili) {
+	public SlotCatenaDiMontaggio(int id,String brand, String country, List<Automobile> automobili) {
 		super();
 		this.brand = brand;
 		this.country = country;
 		this.automobili = automobili;
+		this.id = id;
 	}
 
 	public String getBrand() {
@@ -42,6 +44,8 @@ public class SlotCatenaDiMontaggio {
 		this.automobili = automobili;
 	}
 	
-	
+	public int getId() {
+		return this.id;
+	}
 	
 }
