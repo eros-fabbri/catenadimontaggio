@@ -1,5 +1,6 @@
 package it.prova.catenadimontaggio.model;
 
+import java.security.spec.ECFieldF2m;
 import java.util.Date;
 
 public class Automobile {
@@ -10,6 +11,17 @@ public class Automobile {
 	public Automobile() {
 
 	}
+	
+	
+	
+	public Automobile(String modello, String telaio, Date dataProduzione)  {
+		super();
+		this.modello = modello;
+		this.telaio = telaio;
+		this.dataProduzione = dataProduzione;
+	}
+
+
 
 	public String getModello() {
 		return modello;
