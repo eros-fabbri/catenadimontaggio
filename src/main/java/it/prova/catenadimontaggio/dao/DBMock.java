@@ -6,45 +6,45 @@ import java.util.List;
 
 import it.prova.catenadimontaggio.model.Automobile;
 import it.prova.catenadimontaggio.model.SlotCatenaDiMontaggio;
-import java.text.ParseException;
 
 public class DBMock {
-	public static final List<SlotCatenaDiMontaggio> SLOT_CATENA_MONTAGGIO = new ArrayList<SlotCatenaDiMontaggio>();
+
+	public static final List<SlotCatenaDiMontaggio> SLOT_LIST = new ArrayList<SlotCatenaDiMontaggio>();
 
 	static {
 		try {
-
-			Automobile automobile1 = new Automobile("modello1", "asdflj",
-					new SimpleDateFormat("dd/mm/yyyy").parse("20/05/2022"));
-			Automobile automobile2 = new Automobile("modello2", "sdfvgh",
-					new SimpleDateFormat("dd/mm/yyyy").parse("21/05/2022"));
-			SlotCatenaDiMontaggio slotCatenaDiMontaggio1 = new SlotCatenaDiMontaggio("AutoMobili", "italia",
-					new ArrayList<Automobile>());
-
+			SlotCatenaDiMontaggio slotCatenaDiMontaggio1 = new SlotCatenaDiMontaggio( "Polvo", "Germany", new ArrayList<Automobile>());
+			Automobile automobile1 = new Automobile("modello1", "telaio1",
+					new SimpleDateFormat("dd/MM/yyyy").parse("08/06/2022"));
+			Automobile automobile2 = new Automobile("modello2", "telaio2",
+					new SimpleDateFormat("dd/MM/yyyy").parse("08/06/2022"));
 			slotCatenaDiMontaggio1.getAutomobili().add(automobile1);
 			slotCatenaDiMontaggio1.getAutomobili().add(automobile2);
 
-			Automobile automobile3 = new Automobile("modello4", "asdflj",
-					new SimpleDateFormat("dd/mm/yyyy").parse("22/05/2022"));
-			Automobile automobile4 = new Automobile("modello3", "sdfvgh",
-					new SimpleDateFormat("dd/mm/yyyy").parse("23/05/2022"));
-			SlotCatenaDiMontaggio slotCatenaDiMontaggio2 = new SlotCatenaDiMontaggio("AutoMobili", "italia",
-					new ArrayList<Automobile>());
+			SlotCatenaDiMontaggio slotCatenaDiMontaggio2 = new SlotCatenaDiMontaggio( "Berrari", "Italy", new ArrayList<Automobile>());
+			Automobile automobile3 = new Automobile("modello3", "telaio3",
+					new SimpleDateFormat("dd/MM/yyyy").parse("08/06/2022"));
+			Automobile automobile4 = new Automobile("modello4", "telaio4",
+					new SimpleDateFormat("dd/MM/yyyy").parse("08/06/2022"));
+			slotCatenaDiMontaggio2.getAutomobili().add(automobile1);
+			slotCatenaDiMontaggio2.getAutomobili().add(automobile2);
+			                     
 
-			slotCatenaDiMontaggio2.getAutomobili().add(automobile3);
-			slotCatenaDiMontaggio2.getAutomobili().add(automobile4);
+			SlotCatenaDiMontaggio slotCatenaDiMontaggio3 = new SlotCatenaDiMontaggio( "PMW", "Germany", new ArrayList<Automobile>());
+			Automobile automobile5 = new Automobile("modello5", "telaio5",
+					new SimpleDateFormat("dd/MM/yyyy").parse("08/06/2022"));
+			Automobile automobile6 = new Automobile("modello6", "telaio6",
+					new SimpleDateFormat("dd/MM/yyyy").parse("08/06/2022"));
+			                     
+			slotCatenaDiMontaggio3.getAutomobili().add(automobile1);
+			slotCatenaDiMontaggio3.getAutomobili().add(automobile2);
+                                 
+			SLOT_LIST.add(slotCatenaDiMontaggio1);
+			SLOT_LIST.add(slotCatenaDiMontaggio2);
+			SLOT_LIST.add(slotCatenaDiMontaggio3);
 
-			Automobile automobile5 = new Automobile("modello5", "asdflj",
-					new SimpleDateFormat("dd/mm/yyyy").parse("23/05/2022"));
-			Automobile automobile6 = new Automobile("modello6", "sdfvgh",
-					new SimpleDateFormat("dd/mm/yyyy").parse("24/05/2022"));
-			SlotCatenaDiMontaggio slotCatenaDiMontaggio3 = new SlotCatenaDiMontaggio("AutoMobili", "italia",
-					new ArrayList<Automobile>());
+		} catch (Exception e) {
 
-			slotCatenaDiMontaggio3.getAutomobili().add(automobile5);
-			slotCatenaDiMontaggio3.getAutomobili().add(automobile6);
-
-		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 	}
